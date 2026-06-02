@@ -1,40 +1,50 @@
 # GEM Workout Tracker
 
-Mobile-first workout tracker app. No build step required — pure HTML + vanilla JS.
+Mobile-friendly workout tracker for the GEM Flexible Workout Plan.
+**47 yo · 74 kg · 174 cm** — Push / Pull / Legs / Core / Home
 
 ## Files
 
 ```
-gym_tracker/
-├── index.html      ← Main entry point (open this in browser)
-├── app.js          ← All React app logic
-├── style.css       ← Styles
-├── images/         ← Put exercise images here (referenced from app)
-└── README.md
+workout-app/
+├── index.html          ← Open this in your browser
+├── css/styles.css      ← All styles
+├── js/
+│   ├── data.js         ← Default workout data (from Excel)
+│   └── app.js          ← App logic (vanilla JS, no dependencies)
+└── images/
+    └── README.txt      ← Put exercise images here
 ```
 
 ## Usage
 
-Open `index.html` in any modern browser — works offline.
-
-## GitHub Pages deployment
-
-1. Push all files to a GitHub repo
-2. Go to Settings → Pages → Source: main branch / root
-3. Your tracker will be live at `https://<username>.github.io/<repo>/`
-
-## Exercise images
-
-- In Edit mode, tap "📷 Upload image" on any exercise
-- Images are stored in browser localStorage (tied to the device)
-- For permanent images across devices: add image files to the `images/` folder and reference them by filename — contact developer to wire up path-based loading
+1. Open `index.html` in Chrome, Safari, or any modern browser
+2. **Add to Home Screen** (mobile) for app-like experience:
+   - iPhone: Safari → Share → "Add to Home Screen"
+   - Android: Chrome → Menu → "Install App"
 
 ## Features
 
-- Workout groups (Push A, Pull B, Legs, Core, Home — all editable)
-- Add / delete workout groups and exercises
-- Per-exercise image upload (shows during active workout)
-- Yellow countdown timer during rest periods
-- Set button: "▶ Start" on first set → "✓ Complete Set" → "🏁 Complete Workout" on last set of last exercise
-- Workout history
-- All data saved to localStorage (persists between sessions)
+- ✅ Push (A) / Pull (B) / Legs / Core / Home Evening workouts
+- ✅ Exercise-by-exercise guided workout
+- ✅ Set counter with "Start" / "Complete" buttons
+- ✅ Rest countdown timer (yellow ring)
+- ✅ Upload image per exercise
+- ✅ Edit exercises — name, sets, reps, weight, rest, notes
+- ✅ Add new workout groups
+- ✅ Workout history
+- ✅ All data saved locally (localStorage)
+
+## GitHub Pages Deploy
+
+1. Push all files to a GitHub repo
+2. Settings → Pages → Deploy from main branch
+3. Your app is live at `https://username.github.io/repo-name`
+
+## Exercise Images
+
+Upload images directly in the app (Edit → exercise → Upload Image).
+Images are saved in your browser's localStorage.
+
+For GitHub Pages, you can also place images in the `images/` folder:
+- Naming: `workoutKey-exerciseId.jpg` (e.g. `A-1.jpg` for DB Bench Press)
